@@ -1,0 +1,31 @@
+# Install requirements
+'''
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install scikit-learn
+'''
+
+# 'os' module provides functions for interacting with the operating system 
+import os
+# 'Numpy' is used for mathematical operations on large, multi-dimensional arrays and matrices
+import numpy as np
+# 'Pandas' is used for data manipulation and analysis
+import pandas as pd
+# 'Matplotlib' is a data visualization library for 2D and 3D plots, built on numpy
+from matplotlib import pyplot as plt
+# 'Seaborn' is based on matplotlib; used for plotting statistical graphics
+import seaborn as sns
+# To suppress warnings
+import warnings
+warnings.filterwarnings("ignore")
+
+# Loading the data and setting the unique client_id as the index::
+df = pd.read_csv('loans.csv', index_col = 'client_id')
+
+# # showing the first 10 rows of the dataset:
+df.head(10)
+
+# To check the Dimensions of the dataset:
+df.shape # why it is showing 7 while we have total 8 columns ?
